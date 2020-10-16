@@ -63,7 +63,7 @@ def frankwolfe(n, s):
         x = np.add(x,y).tolist() # update x
         
         mindual = min(mindual, Obj_f+dual_gap) # update the upper bound
-        print('dual gap =', dual_gap, 'objective value =', Obj_f)
+        print('dual gap =', dual_gap, 'objective value =', Obj_f+intval)
         if Obj_f < 0:
             abs_Obj_f =  -Obj_f
         else:
