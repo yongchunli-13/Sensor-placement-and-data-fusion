@@ -23,7 +23,7 @@ df = pd.DataFrame(columns=('n', 's', 'objective value', 'time'))
 
 for s in range(100,400,100): # set the values of s
     print("This is case ", loc+1)
-    fval, xsol, time  = localsearch(n, 150) 
+    fval, xsol, time  = localsearch(n, s) 
     df.loc[loc] = np.array([n, s, fval, time])
     loc = loc+1  
 
